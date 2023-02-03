@@ -20,3 +20,13 @@ vim.keymap.set('n', '<leader>wv', '<C-w>v', { desc = 'Vertical Split' })
 -- remove lazygit bindings
 vim.api.nvim_del_keymap('n', '<leader>gg')
 vim.api.nvim_del_keymap('n', '<leader>gG')
+vim.api.nvim_del_keymap('n', '<leader>gc')
+vim.api.nvim_del_keymap('n', '<leader>gs')
+
+-- undo tree
+vim.keymap.set(
+  'n',
+  '<leader>U',
+  '<Cmd>UndotreeToggle<CR>',
+  { noremap = true, silent = true, desc = 'Toggle Undo Tree' }
+)
