@@ -20,12 +20,32 @@ vim.keymap.set('n', '<M-Down>', '<cmd>resize -2<cr>', { desc = 'Decrease window 
 vim.keymap.set('n', '<M-Left>', '<cmd>vertical resize -2<cr>', { desc = 'Decrease window width' })
 vim.keymap.set('n', '<M-Right>', '<cmd>vertical resize +2<cr>', { desc = 'Increase window width' })
 
--- remove some git bindings
-vim.api.nvim_del_keymap('n', '<leader>gg')
-vim.api.nvim_del_keymap('n', '<leader>gG')
-vim.api.nvim_del_keymap('n', '<leader>gc')
-vim.api.nvim_del_keymap('n', '<leader>gs')
-
--- remove some window bindings
+--  window/buffer
 vim.api.nvim_del_keymap('n', '<leader>w|')
 vim.api.nvim_del_keymap('n', '<leader>w-')
+vim.api.nvim_del_keymap('n', '<leader>-')
+vim.api.nvim_del_keymap('n', '<leader>|')
+
+vim.keymap.set('n', '<leader>wv', '<C-W>v', { desc = 'Vertical Split' })
+vim.keymap.set('n', '<leader>wh', '<C-W>s', { desc = 'Horizontal Split' })
+vim.keymap.set('n', '<leader>wf', '<cmd>w<cr>', { desc = 'Save Buffer' })
+vim.keymap.set('n', '<leader>wF', '<cmd>wa<cr>', { desc = 'Save All Buffers' })
+
+vim.keymap.set('n', '<leader>wc', function()
+  require('mini.bufremove').delete(0, false)
+end, { desc = 'Close Buffer' })
+
+vim.keymap.set('n', '<leader>wC', function()
+  require('mini.bufremove').delete(0, true)
+end, { desc = 'Close Buffer' })
+
+vim.keymap.set(
+  'n',
+  '<leader>wo',
+  '<cmd>BufferLineCloseLeft<cr> <cmd>BufferLineCloseRight<cr>',
+  { desc = 'Close Other Buffers' }
+)
+
+-- leap
+vim.keymap.set({ 'x', 'o' }, 'x', 'x', { noremap = true, silent = true })
+vim.keymap.set({ 'x', 'o' }, 'X', 'X', { noremap = true, silent = true })

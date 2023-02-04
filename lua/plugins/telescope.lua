@@ -20,6 +20,13 @@ return {
       },
     },
 
+    keys = {
+      { '<leader>gc', false },
+      { '<leader>gs', false },
+      { '<leader>gg', false },
+      { '<leader>su', '<cmd>Telescope undo<cr>', desc = 'Search Undo History' },
+    },
+
     opts = function(_, opts)
       print('telescope options')
       local actions = require('telescope.actions')

@@ -1,13 +1,14 @@
 return {
   {
     'folke/which-key.nvim',
-    -- config = function()
-    --   local wk = require('which-key')
-    --   wk.register({
+    -- opts = function(_, opts)
+    --   require('which-key').register({
     --     ['<leader>'] = {
-    --       g = { name = '+Git Diffview' },
+    --
     --     },
     --   })
+    --
+    --   return opts
     -- end,
   },
 }
