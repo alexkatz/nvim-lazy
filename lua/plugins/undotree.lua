@@ -6,7 +6,7 @@ return {
     end,
 
     keys = {
-      { '<leader>U', '<cmd>UndotreeToggle<cr>', desc = 'Toggle Undo Tree' },
+      { '<leader>U', '<cmd>UndotreeToggle<cr> <cmd>UndotreeFocus<cr>', desc = 'Toggle Undo Tree' },
     },
   },
 }

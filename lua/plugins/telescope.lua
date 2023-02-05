@@ -52,7 +52,7 @@ return {
           ['<esc>'] = actions.close,
           ['<C-j>'] = actions.move_selection_next,
           ['<C-k>'] = actions.move_selection_previous,
-          ['<CR>'] = actions.select_default,
+          ['<cr>'] = actions.select_default,
         },
       }
     end,

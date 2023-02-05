@@ -53,5 +53,9 @@ return {
         },
       },
     },
+
+    keys = {
+      { '<leader>cR', '<cmd>LspRestart<cr>', desc = 'Restart LSP' },
+    },
   },
 }

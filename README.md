@@ -1,4 +1,3 @@
-# 💤 LazyVim
+#### This is my LazyVim config
 
-A starter template for [LazyVim](https://github.com/LazyVim/LazyVim).
-Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
+It's a work in progress. I do React/Typescript most of the time, and Rust some of the time.
