@@ -12,6 +12,11 @@ return {
           ['l'] = 'open',
           ['L'] = 'focus_preview',
           ['h'] = 'close_node',
+          ['<C-v>'] = 'open_vsplit',
+          ['s'] = 'noop',
+          ['S'] = 'noop',
+          ['/'] = 'noop',
+          ['<esc>'] = 'noop',
         },
       },
       filesystem = {

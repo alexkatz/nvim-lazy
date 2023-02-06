@@ -31,17 +31,11 @@ vim.keymap.set('n', '<leader>wh', '<C-W>s', { desc = 'Horizontal Split' })
 vim.keymap.set('n', '<leader>wf', '<cmd>w<cr>', { desc = 'Save Buffer' })
 vim.keymap.set('n', '<leader>wF', '<cmd>wa<cr>', { desc = 'Save All Buffers' })
 
-vim.keymap.set('n', '<leader>wc', function()
-  require('mini.bufremove').delete(0, false)
-end, { desc = 'Close Buffer' })
-
-vim.keymap.set('n', '<leader>wC', function()
-  require('mini.bufremove').delete(0, true)
-end, { desc = 'Close Buffer' })
+vim.keymap.set('n', '<leader>wo', '<cmd>only<cr>', { desc = 'Close Other Windows' })
 
 vim.keymap.set(
   'n',
-  '<leader>wo',
+  '<leader>bo',
   '<cmd>BufferLineCloseLeft<cr> <cmd>BufferLineCloseRight<cr>',
   { desc = 'Close Other Buffers' }
 )
