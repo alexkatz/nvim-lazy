@@ -46,6 +46,7 @@ vim.keymap.set(
   { desc = 'Close Other Buffers' }
 )
 
--- leap
+-- leap/vim-surround cooperation
 vim.keymap.set({ 'x', 'o' }, 'x', 'x', { noremap = true, silent = true })
 vim.keymap.set({ 'x', 'o' }, 'X', 'X', { noremap = true, silent = true })
+vim.keymap.set('v', 'S', '<Plug>VSurround', { noremap = true, silent = true })

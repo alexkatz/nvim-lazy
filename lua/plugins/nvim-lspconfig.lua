@@ -8,11 +8,6 @@ return {
 
     opts = {
       servers = {
-        tsserver = {
-          root_dir = require('lspconfig.util').root_pattern('.git'),
-          flags = { allow_incremental_sync = true, debounce_text_changes = 500 },
-        },
-
         tailwindcss = {
           root_dir = require('lspconfig.util').root_pattern('.git'),
           flags = { allow_incremental_sync = true, debounce_text_changes = 500 },
@@ -58,4 +53,6 @@ return {
       { '<leader>cR', '<cmd>LspRestart<cr>', desc = 'Restart LSP' },
     },
   },
+  { import = 'lazyvim.plugins.extras.lang.typescript' },
+  { import = 'lazyvim.plugins.extras.lang.json' },
 }
