@@ -48,10 +48,6 @@ return {
         },
       },
     },
-
-    keys = {
-      { '<leader>cR', '<cmd>LspRestart<cr>', desc = 'Restart LSP' },
-    },
   },
   { import = 'lazyvim.plugins.extras.lang.typescript' },
   { import = 'lazyvim.plugins.extras.lang.json' },

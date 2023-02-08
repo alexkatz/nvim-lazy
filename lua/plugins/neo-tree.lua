@@ -17,11 +17,17 @@ return {
           ['S'] = 'noop',
           ['/'] = 'noop',
           ['<esc>'] = 'noop',
+          ['z'] = 'noop',
+          ['W'] = 'close_all_nodes',
         },
       },
       filesystem = {
         follow_current_file = true,
       },
+    },
+
+    keys = {
+      { '<leader>E', '<cmd>Neotree focus<cr>', desc = 'Focus Neotree' },
     },
   },
   {
