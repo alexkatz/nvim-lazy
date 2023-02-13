@@ -25,10 +25,11 @@ return {
       { '<leader>gs', false },
       { '<leader>gg', false },
       { '<leader>su', '<cmd>Telescope undo<cr>', desc = 'Search Undo History' },
+      { '<leader>sR', '<cmd>Telescope resume<cr>', desc = 'Resume Search' },
+      { '<leader>fR', '<cmd>Telescope resume<cr>', desc = 'Resume Search' },
     },
 
     opts = function(_, opts)
-      print('telescope options')
       local actions = require('telescope.actions')
       opts.extensions = {
         undo = {
@@ -40,21 +41,18 @@ return {
         },
       }
 
-      vim.keymap.set(
-        'n',
-        '<leader>su',
-        '<cmd>Telescope undo<cr>',
-        { noremap = true, silent = true, desc = 'Search Undo History' }
-      )
-
-      opts.defaults.mappings = {
-        i = {
-          ['<esc>'] = actions.close,
-          ['<C-j>'] = actions.move_selection_next,
-          ['<C-k>'] = actions.move_selection_previous,
-          ['<cr>'] = actions.select_default,
-        },
+      opts.defaults.layout_strategy = 'vertical'
+      opts.defaults.layout_config = {
+        mirror = true,
       }
+
+      vim.tbl_extend('force', opts.defaults.mappings.i, {
+        ['<cr>'] = actions.select_default,
+        ['<C-q>'] = actions.smart_add_to_qflist + actions.open_qflist,
+      })
+
+      opts.defaults.mappings.i['<C-j>'] = actions.move_selection_next
+      opts.defaults.mappings.i['<C-k>'] = actions.move_selection_previous
     end,
   },
 }

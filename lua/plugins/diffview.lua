@@ -1,6 +1,11 @@
 local open_diff_view = function()
-  vim.ui.input({ prompt = 'Diff working tree with branch (leave blank for development): ' }, function(branch_name)
-    require('diffview').open(string.len(branch_name) == 0 and 'development' or branch_name)
+  vim.ui.input({ prompt = 'Diff working tree with branch: ' }, function(branch_name)
+    -- TODO: hooking this up to telescope to select a branch would be awesome
+    if branch_name ~= nil and string.len(branch_name) > 0 then
+      require('diffview').open(branch_name)
+    else
+      vim.cmd('DiffviewOpen')
+    end
   end)
 end
 

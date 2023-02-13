@@ -1,6 +1,29 @@
 return {
   {
     'nvim-neo-tree/neo-tree.nvim',
+    dependencies = {
+
+      {
+        's1n7ax/nvim-window-picker',
+        config = function()
+          require('window-picker').setup({
+            autoselect_one = true,
+            include_current = false,
+            filter_rules = {
+              -- filter using buffer options
+              bo = {
+                -- if the file type is one of following, the window will be ignored
+                filetype = { 'neo-tree', 'neo-tree-popup', 'notify' },
+
+                -- if the buffer type is one of following, the window will be ignored
+                buftype = { 'terminal', 'quickfix' },
+              },
+            },
+            other_win_hl_color = '#e35e4f',
+          })
+        end,
+      },
+    },
     opts = {
       sources = {
         'filesystem',
@@ -16,6 +39,8 @@ return {
           ['s'] = 'noop',
           ['S'] = 'noop',
           ['/'] = 'noop',
+          ['?'] = 'noop',
+          ['g?'] = { 'show_help', desc = 'Show Neo-Tree help' },
           ['<esc>'] = 'noop',
           ['z'] = 'noop',
           ['W'] = 'close_all_nodes',
@@ -29,8 +54,5 @@ return {
     keys = {
       { '<leader>E', '<cmd>Neotree focus<cr>', desc = 'Focus Neotree' },
     },
-  },
-  {
-    's1n7ax/nvim-window-picker',
   },
 }

@@ -2,7 +2,7 @@ return {
   'williamboman/mason.nvim',
   opts = {
     ensure_installed = {
-      'prettierd',
+      'prettier',
       'eslint-lsp',
       'stylua',
       'rustywind',
