@@ -43,7 +43,6 @@ local delete_hidden_buffers = function()
   end
 
   local all_buffers = vim.api.nvim_list_bufs()
-  print(vim.inspect(all_buffers))
   local bufremove = require('mini.bufremove')
   for _, buf in ipairs(all_buffers) do
     if not visible_buffers[buf] then
