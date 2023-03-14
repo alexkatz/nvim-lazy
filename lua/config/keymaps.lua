@@ -33,12 +33,23 @@ vim.keymap.set('n', '<leader>wF', '<cmd>wa<cr>', { desc = 'Save All Buffers' })
 
 vim.keymap.set('n', '<leader>wo', '<cmd>only<cr>', { desc = 'Close Other Windows' })
 
-vim.keymap.set(
-  'n',
-  '<leader>bo',
-  '<cmd>BufferLineCloseLeft<cr> <cmd>BufferLineCloseRight<cr>',
-  { desc = 'Close Other Buffers' }
-)
+local delete_hidden_buffers = function()
+  local windows = vim.api.nvim_list_wins()
 
--- vim-surround cooperation
-vim.keymap.set('v', 'S', '<Plug>VSurround', { noremap = true, silent = true })
+  local visible_buffers = {}
+  for _, window in ipairs(windows) do
+    local buffer = vim.api.nvim_win_get_buf(window)
+    visible_buffers[buffer] = true
+  end
+
+  local all_buffers = vim.api.nvim_list_bufs()
+  print(vim.inspect(all_buffers))
+  local bufremove = require('mini.bufremove')
+  for _, buf in ipairs(all_buffers) do
+    if not visible_buffers[buf] then
+      bufremove.delete(buf)
+    end
+  end
+end
+
+vim.keymap.set('n', '<leader>bo', delete_hidden_buffers, { desc = 'Close Hidden Buffers' })

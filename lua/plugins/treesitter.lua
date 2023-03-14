@@ -24,10 +24,8 @@ return {
         'yaml',
       },
       auto_install = true,
-
       autotag = { enable = true },
       matchup = { enable = true },
-
       highlight = { enable = true },
       playground = { enable = true },
       indent = { enable = true, disable = { 'python' } },
@@ -55,12 +53,13 @@ return {
   },
 
   -- rainbow braces, brackets
-  'p00f/nvim-ts-rainbow',
+  'mrjones2014/nvim-ts-rainbow',
 
   {
     'nvim-treesitter/playground',
     event = 'BufRead',
   },
+
   --  auto close and rename html/jsx tags
   'windwp/nvim-ts-autotag',
 }

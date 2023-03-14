@@ -10,6 +10,7 @@ return {
       'beautysh',
       'yamlfmt',
       'lua-language-server',
+      'codelldb',
       'rust-analyzer',
       'typescript-language-server',
       'tailwindcss-language-server',
