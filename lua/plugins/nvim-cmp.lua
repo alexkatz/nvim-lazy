@@ -16,6 +16,12 @@ return {
       ['<C-space>'] = cmp.mapping.complete(),
     })
 
+    opts.sources = cmp.config.sources({
+      { name = 'nvim_lsp' },
+      { name = 'buffer' },
+      { name = 'path' },
+    })
+
     -- tailwind colors
     local format_kinds = opts.formatting.format
     opts.formatting.format = function(entry, item)

@@ -10,5 +10,5 @@ return {
       })
     end,
   },
-  { 'alexkatz/arctic.nvim', dependencies = { 'rktjmp/lush.nvim' } },
+  { dir = '~/Developer/arctic.nvim', dependencies = { 'rktjmp/lush.nvim' } },
 }
