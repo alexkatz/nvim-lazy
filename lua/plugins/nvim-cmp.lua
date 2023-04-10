@@ -12,7 +12,6 @@ return {
       ['<C-l>'] = cmp.mapping.confirm({ select = true }),
       ['<Tab>'] = cmp.mapping.confirm({ select = true }),
       ['<Enter>'] = cmp.mapping.confirm({ select = true }),
-      ---@diagnostic disable-next-line: missing-parameter
       ['<C-space>'] = cmp.mapping.complete(),
     })
 

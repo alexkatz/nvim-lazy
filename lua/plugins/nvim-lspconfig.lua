@@ -10,6 +10,11 @@ return {
           },
         },
         tailwindcss = {
+          handlers = {
+            ['textDocument/hover'] = vim.lsp.with(vim.lsp.handlers['textDocument/hover'], {
+              silent = true,
+            }),
+          },
           root_dir = require('lspconfig.util').root_pattern('.git'),
           flags = { allow_incremental_sync = true, debounce_text_changes = 500 },
           settings = {

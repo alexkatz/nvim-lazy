@@ -55,11 +55,6 @@ return {
   -- rainbow braces, brackets
   'mrjones2014/nvim-ts-rainbow',
 
-  {
-    'nvim-treesitter/playground',
-    event = 'BufRead',
-  },
-
   --  auto close and rename html/jsx tags
   'windwp/nvim-ts-autotag',
 }

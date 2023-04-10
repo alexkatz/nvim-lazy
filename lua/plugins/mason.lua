@@ -5,7 +5,6 @@ return {
       'prettier',
       'eslint-lsp',
       'stylua',
-      'rustywind',
       'rustfmt',
       'beautysh',
       'yamlfmt',
