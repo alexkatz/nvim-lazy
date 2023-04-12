@@ -2,4 +2,5 @@
 require('config.lazy')
 
 -- vim.cmd([[colorscheme arctic]])
--- vim.cmd([[colorscheme catpuccin-macchiato]])
+-- vim.cmd([[colorscheme tokyonight-moon]])
+vim.cmd([[colorscheme catppuccin]])

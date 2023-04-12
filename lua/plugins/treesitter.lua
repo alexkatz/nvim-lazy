@@ -26,7 +26,7 @@ return {
       auto_install = true,
       autotag = { enable = true },
       matchup = { enable = true },
-      highlight = { enable = true },
+      highlight = { enable = true, additional_vim_regex_highlighting = false },
       playground = { enable = true },
       indent = { enable = true, disable = { 'python' } },
 
@@ -42,11 +42,6 @@ return {
       rainbow = {
         enable = true,
         extended_mode = false,
-        colors = {
-          'Gold',
-          'Orchid',
-          'DodgerBlue',
-        },
         disable = { 'html' },
       },
     },
