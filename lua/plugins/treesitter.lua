@@ -4,7 +4,7 @@ return {
     build = function()
       pcall(require('nvim-treesitter.install').update({ with_sync = true }))
     end,
-    config = {
+    opts = {
       ensure_installed = {
         'lua',
         'rust',
@@ -29,7 +29,6 @@ return {
       highlight = { enable = true, additional_vim_regex_highlighting = false },
       playground = { enable = true },
       indent = { enable = true, disable = { 'python' } },
-
       incremental_selection = {
         enable = true,
         keymaps = {
@@ -38,7 +37,6 @@ return {
           node_decremental = '<M-v>',
         },
       },
-
       rainbow = {
         enable = true,
         extended_mode = false,
