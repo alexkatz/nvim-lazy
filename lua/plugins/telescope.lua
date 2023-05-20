@@ -17,6 +17,7 @@ return {
       { '<leader>gs', false },
       { '<leader>sR', '<cmd>Telescope resume<cr>', desc = 'Resume Search' },
       { '<leader>fR', '<cmd>Telescope resume<cr>', desc = 'Resume Search' },
+      { '<leader>s"', '<cmd>Telescope registers<cr>', desc = 'Search Registers' },
     },
 
     opts = function(_, opts)
