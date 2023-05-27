@@ -5,7 +5,7 @@ return {
       prefix = ' ',
     },
     init = function()
-      require('blame_line').disable()
+      require('blame_line').setup()
     end,
     keys = {
       { '<leader>ub', '<cmd>BlameLineToggle<cr>', desc = 'Toggle Blame Line' },
