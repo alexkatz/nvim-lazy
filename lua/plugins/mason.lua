@@ -1,8 +1,7 @@
 return {
   'williamboman/mason.nvim',
-  opts = {
-    ensure_installed = {
-      'prettier',
+  opts = function(_, opts)
+    local to_install = {
       'eslint-lsp',
       'stylua',
       'rustfmt',
@@ -14,6 +13,10 @@ return {
       'typescript-language-server',
       'tailwindcss-language-server',
       'json-lsp',
-    },
-  },
+    }
+
+    for _, package in ipairs(to_install) do
+      table.insert(opts.ensure_installed, package)
+    end
+  end,
 }
