@@ -23,27 +23,31 @@ return {
         lsp_trouble = true,
         illuminate = true,
         which_key = true,
-        navic = true,
         noice = true,
         gitsigns = true,
         notify = true,
-      },
-      native_lsp = {
-        enabled = true,
-        underlines = {
-          errors = { 'underline' },
-          hints = { 'underline' },
-          warnings = { 'underline' },
-          information = { 'underline' },
+        native_lsp = {
+          enabled = true,
+          underlines = {
+            errors = { 'undercurl' },
+            hints = { 'undercurl' },
+            warnings = { 'undercurl' },
+            information = { 'undercurl' },
+          },
         },
-      },
-      navic = {
-        enabled = false,
-        custom_bg = 'NONE',
-      },
-      indent_blankline = {
-        enabled = true,
-        colored_indent_levels = false,
+        navic = {
+          enabled = true,
+        },
+        indent_blankline = {
+          enabled = true,
+          colored_indent_levels = false,
+        },
+        alpha = true,
+        mini = true,
+        neotest = true,
+        nvimtree = true,
+        semantic_tokens = true,
+        treesitter = true,
       },
       custom_highlights = function(colors)
         return {

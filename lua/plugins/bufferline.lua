@@ -8,4 +8,5 @@ return {
       truncate_names = false,
     },
   },
+  enabled = false,
 }
