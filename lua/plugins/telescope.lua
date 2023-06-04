@@ -24,12 +24,22 @@ return {
       local actions = require('telescope.actions')
 
       opts.pickers = {
-        lsp_references = { show_line = false },
+        lsp_references = { show_line = false, include_current_line = true },
+        buffers = {
+          show_all_buffers = true,
+          sort_lastused = true,
+          mappings = {
+            i = {
+              ['<c-d>'] = 'delete_buffer',
+            },
+          },
+        },
       }
 
+      -- opts.defaults.sorting_strategy = 'ascending'
       opts.defaults.layout_strategy = 'vertical'
-
       opts.defaults.layout_config = {
+        -- prompt_position = 'top',
         mirror = true,
       }
 
@@ -38,6 +48,7 @@ return {
       opts.defaults.mappings.i['<esc>'] = actions.close
       opts.defaults.mappings.i['<C-j>'] = actions.move_selection_next
       opts.defaults.mappings.i['<C-k>'] = actions.move_selection_previous
+
       opts.defaults.mappings.i['<C-n>'] = function(...)
         actions.results_scrolling_down(...)
       end
