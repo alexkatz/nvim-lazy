@@ -32,9 +32,9 @@ return {
       incremental_selection = {
         enable = true,
         keymaps = {
-          init_selection = '<CR>',
-          node_incremental = '<CR>',
-          node_decremental = '<BS>',
+          init_selection = '<C-v>',
+          node_incremental = '<C-v>',
+          node_decremental = '<M-v>',
         },
       },
       rainbow = {
