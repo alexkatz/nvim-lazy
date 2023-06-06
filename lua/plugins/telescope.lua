@@ -27,10 +27,10 @@ return {
         lsp_references = { show_line = false, include_current_line = true },
         buffers = {
           show_all_buffers = true,
-          sort_lastused = true,
+          sort_mru = true,
           mappings = {
             i = {
-              ['<c-d>'] = 'delete_buffer',
+              ['<c-d>'] = actions.delete_buffer,
             },
           },
         },

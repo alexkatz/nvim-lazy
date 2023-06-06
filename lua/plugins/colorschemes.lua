@@ -53,6 +53,7 @@ return {
         return {
           LeapBackdrop = { link = 'Comment' },
           DiffDelete = { bg = 'none', fg = colors.overlay0 },
+          BlameLineNvim = { bg = 'none', fg = colors.surface1 },
         }
       end,
     },
