@@ -9,7 +9,6 @@ return {
         'lua',
         'rust',
         'typescript',
-        'help',
         'vim',
         'bash',
         'html',
