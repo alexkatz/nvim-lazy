@@ -9,6 +9,7 @@ return {
     },
     opts = {
       theme = 'catppuccin',
+      show_modified = true,
     },
   },
 }

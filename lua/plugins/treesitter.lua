@@ -1,6 +1,10 @@
 return {
   {
     'nvim-treesitter/nvim-treesitter',
+    dependencies = {
+      'HiPhish/nvim-ts-rainbow2',
+      'windwp/nvim-ts-autotag',
+    },
     build = function()
       pcall(require('nvim-treesitter.install').update({ with_sync = true }))
     end,
@@ -38,15 +42,7 @@ return {
       },
       rainbow = {
         enable = true,
-        extended_mode = false,
-        disable = { 'html' },
       },
     },
   },
-
-  -- rainbow braces, brackets
-  'mrjones2014/nvim-ts-rainbow',
-
-  --  auto close and rename html/jsx tags
-  'windwp/nvim-ts-autotag',
 }
