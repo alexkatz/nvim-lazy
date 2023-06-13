@@ -5,9 +5,6 @@ return {
       'HiPhish/nvim-ts-rainbow2',
       'windwp/nvim-ts-autotag',
     },
-    build = function()
-      pcall(require('nvim-treesitter.install').update({ with_sync = true }))
-    end,
     opts = {
       ensure_installed = {
         'lua',
