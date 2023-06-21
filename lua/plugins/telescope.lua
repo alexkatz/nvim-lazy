@@ -43,7 +43,7 @@ return {
         mirror = true,
       }
 
-      opts.defaults.mappings.i['<a-q>'] = actions.smart_add_to_qflist + actions.open_qflist
+      opts.defaults.mappings.i['<C-q>'] = actions.smart_send_to_qflist + actions.open_qflist
       opts.defaults.mappings.i['<cr>'] = actions.select_default
       opts.defaults.mappings.i['<esc>'] = actions.close
       opts.defaults.mappings.i['<C-j>'] = actions.move_selection_next
