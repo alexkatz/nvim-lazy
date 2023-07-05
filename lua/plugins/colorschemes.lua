@@ -46,6 +46,7 @@ return {
         mini = true,
         neotest = true,
         nvimtree = true,
+        mason = true,
         semantic_tokens = true,
         treesitter = true,
       },

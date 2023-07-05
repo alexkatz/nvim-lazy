@@ -17,6 +17,7 @@ require('lazy').setup({
     { import = 'lazyvim.plugins.extras.lang.typescript' },
     { import = 'lazyvim.plugins.extras.lang.tailwind' },
     { import = 'lazyvim.plugins.extras.lang.json' },
+    { import = 'lazyvim.plugins.extras.lang.rust' },
     { import = 'lazyvim.plugins.extras.coding.copilot' },
     { import = 'lazyvim.plugins.extras.coding.yanky' },
     { import = 'lazyvim.plugins.extras.dap.core' },
@@ -30,20 +31,22 @@ require('lazy').setup({
     { import = 'plugins' },
   },
   defaults = {
-    lazy = false,
+    -- lazy = false,
     version = false, -- always use the latest git commit
   },
-  install = { colorscheme = { 'tokyonight', 'habamax' } },
+  install = { colorscheme = { 'tokyonight', 'catppuccin' } },
   checker = { enabled = true }, -- automatically check for plugin updates
-  performance = {
-    rtp = {
-      disabled_plugins = {
-        'gzip',
-        'tarPlugin',
-        'tohtml',
-        'tutor',
-        'zipPlugin',
-      },
+  rtp = {
+    -- disable some rtp plugins
+    disabled_plugins = {
+      'gzip',
+      -- "matchit",
+      -- "matchparen",
+      -- "netrwPlugin",
+      'tarPlugin',
+      'tohtml',
+      'tutor',
+      'zipPlugin',
     },
   },
 })

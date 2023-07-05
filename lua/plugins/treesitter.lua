@@ -2,8 +2,8 @@ return {
   {
     'nvim-treesitter/nvim-treesitter',
     dependencies = {
-      'HiPhish/nvim-ts-rainbow2',
       'windwp/nvim-ts-autotag',
+      'hiphish/rainbow-delimiters.nvim',
     },
     opts = {
       ensure_installed = {
@@ -36,9 +36,6 @@ return {
           node_incremental = '<C-v>',
           node_decremental = '<M-v>',
         },
-      },
-      rainbow = {
-        enable = true,
       },
     },
   },
