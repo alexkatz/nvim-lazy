@@ -12,7 +12,7 @@ return {
         open = function()
           vim.api.nvim_input('<esc><space>e')
         end,
-        size = { height = 1 },
+        size = { height = 1, width = 50 },
       },
     },
     right = {

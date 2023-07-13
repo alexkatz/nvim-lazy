@@ -16,7 +16,6 @@ return {
       no_bold = false, -- Force no bold
       integrations = {
         cmp = true,
-        leap = true,
         neotree = true,
         ts_rainbow = true,
         telescope = true,
@@ -52,7 +51,6 @@ return {
       },
       custom_highlights = function(colors)
         return {
-          LeapBackdrop = { link = 'Comment' },
           DiffDelete = { bg = 'none', fg = colors.overlay0 },
           BlameLineNvim = { bg = 'none', fg = colors.surface1 },
         }

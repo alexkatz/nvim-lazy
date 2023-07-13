@@ -14,7 +14,11 @@ vim.keymap.set('n', 'N', 'Nzzzv', { noremap = true, silent = true })
 vim.keymap.set({ 'i', 'v', 'n', 's' }, '<M-s>', '<cmd>w<cr><esc>', { desc = 'Save file' })
 vim.keymap.set({ 'i', 'v', 'n', 's' }, '<M-a>', '<cmd>wa<cr><esc>', { desc = 'Save file' })
 
--- Resize window using <ctrl> arrow keys
+--  option or ctrl + bs to delete word like macOS
+vim.keymap.set({ 'i', 'v', 'n', 's' }, '<M-BS>', '<C-w>', { desc = 'Delete word' })
+vim.keymap.set({ 'i', 'v', 'n', 's' }, '<C-BS>', '<C-w>', { desc = 'Delete word' })
+
+-- Resize window using <option> arrow keys
 vim.keymap.set('n', '<M-Up>', '<cmd>resize +2<cr>', { desc = 'Increase window height' })
 vim.keymap.set('n', '<M-Down>', '<cmd>resize -2<cr>', { desc = 'Decrease window height' })
 vim.keymap.set('n', '<M-Left>', '<cmd>vertical resize -2<cr>', { desc = 'Decrease window width' })
