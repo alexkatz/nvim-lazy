@@ -18,6 +18,7 @@ require('lazy').setup({
     { import = 'lazyvim.plugins.extras.lang.tailwind' },
     { import = 'lazyvim.plugins.extras.lang.json' },
     { import = 'lazyvim.plugins.extras.lang.rust' },
+    { import = 'lazyvim.plugins.extras.lang.yaml' },
     { import = 'lazyvim.plugins.extras.coding.copilot' },
     { import = 'lazyvim.plugins.extras.coding.yanky' },
     { import = 'lazyvim.plugins.extras.dap.core' },

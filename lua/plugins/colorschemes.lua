@@ -10,12 +10,16 @@ return {
       dim_inactive = {
         enabled = true,
         shade = 'dark',
-        percentage = 0.15,
+        percentage = 0.20,
       },
       no_italic = true, -- Force no italic
       no_bold = false, -- Force no bold
       integrations = {
         cmp = true,
+        dap = {
+          enabled = true,
+          enable_ui = true,
+        },
         neotree = true,
         ts_rainbow = true,
         telescope = true,
@@ -43,7 +47,15 @@ return {
         },
         alpha = true,
         mini = true,
+        markdown = true,
+        flash = true,
         neotest = true,
+        barbecue = {
+          dim_dirname = true, -- directory name is dimmed by default
+          bold_basename = true,
+          dim_context = false,
+          alt_background = false,
+        },
         nvimtree = true,
         mason = true,
         semantic_tokens = true,
