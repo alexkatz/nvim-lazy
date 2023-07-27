@@ -30,7 +30,7 @@ return {
           sort_mru = true,
           mappings = {
             i = {
-              ['<c-d>'] = actions.delete_buffer,
+              ['<c-w>'] = actions.delete_buffer,
             },
           },
         },
