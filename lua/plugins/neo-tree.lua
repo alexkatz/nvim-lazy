@@ -1,6 +1,7 @@
 return {
   {
     'nvim-neo-tree/neo-tree.nvim',
+    enabled = false,
     dependencies = {
       'nvim-tree/nvim-web-devicons',
       {
@@ -24,6 +25,7 @@ return {
       },
     },
     opts = {
+      view = { adaptive_size = true },
       -- Add this section only if you've configured source selector.
       source_selector = {
         sources = {

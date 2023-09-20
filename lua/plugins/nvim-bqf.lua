@@ -10,7 +10,6 @@ return {
         end,
       },
     },
-
     opts = {
       preview = {
         win_height = 30,
