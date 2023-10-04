@@ -1,6 +1,6 @@
 return {
   {
-    'jose-elias-alvarez/null-ls.nvim',
+    'nvimtools/none-ls.nvim',
     keys = {
       { '<leader>cn', '<cmd>NullLsInfo<cr>', desc = 'NullLs Info' },
     },

@@ -38,13 +38,8 @@ return {
             information = { 'undercurl' },
           },
         },
-        navic = {
-          enabled = true,
-        },
-        indent_blankline = {
-          enabled = true,
-          colored_indent_levels = false,
-        },
+        navic = { enabled = true },
+        indent_blankline = { enabled = true },
         alpha = true,
         mini = true,
         markdown = true,
