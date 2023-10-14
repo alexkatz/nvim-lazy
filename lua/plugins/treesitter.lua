@@ -6,23 +6,6 @@ return {
       'hiphish/rainbow-delimiters.nvim',
     },
     opts = {
-      ensure_installed = {
-        'lua',
-        'rust',
-        'typescript',
-        'vim',
-        'bash',
-        'html',
-        'javascript',
-        'json',
-        'markdown',
-        'markdown_inline',
-        'regex',
-        'tsx',
-        'typescript',
-        'vim',
-        'yaml',
-      },
       auto_install = true,
       autotag = { enable = true },
       matchup = { enable = true },
@@ -30,13 +13,17 @@ return {
       playground = { enable = true },
       indent = { enable = true, disable = { 'python' } },
       incremental_selection = {
-        enable = true,
         keymaps = {
           init_selection = '<C-v>',
           node_incremental = '<C-v>',
           node_decremental = '<M-v>',
         },
       },
+    },
+    keys = {
+      { '<C-v>', desc = 'Init selection' },
+      { '<C-v>', desc = 'Increment selection', mode = 'x' },
+      { '<M-v>', desc = 'Decrement selection', mode = 'x' },
     },
   },
 }
