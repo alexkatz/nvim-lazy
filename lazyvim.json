@@ -13,11 +13,10 @@
     "lazyvim.plugins.extras.linting.eslint",
     "lazyvim.plugins.extras.ui.edgy",
     "lazyvim.plugins.extras.util.mini-hipatterns",
-    "lazyvim.plugins.extras.vscode",
-    "lazyvim.plugins.extras.editor.trouble-v3"
+    "lazyvim.plugins.extras.vscode"
   ],
   "news": {
     "NEWS.md": "4964"
   },
-  "version": 4
+  "version": 6
 }
