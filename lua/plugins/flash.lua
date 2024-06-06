@@ -6,5 +6,8 @@ return {
         enabled = true,
       },
     },
+    modes = {
+      search = { enabled = true },
+    },
   },
 }
