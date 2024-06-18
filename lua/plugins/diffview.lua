@@ -11,6 +11,10 @@ local open_diff_view = function()
   })
 end
 
+local open_telescope_git_branches = function()
+  require('telescope.builtin').git_branches()
+end
+
 return {
   {
     'sindrets/diffview.nvim',
@@ -21,6 +25,7 @@ return {
       { '<leader>gF', '<cmd>DiffviewFileHistory %<cr>', desc = 'File history (this file)' },
       { '<leader>gf', '<cmd>DiffviewFileHistory<cr>', desc = 'File history' },
       { '<leader>gd', '<cmd>DiffviewClose<cr>', desc = 'Close diffview' },
+      { '<leader>gs', open_telescope_git_branches, desc = 'Telescope Git branches' },
     },
   },
 }
