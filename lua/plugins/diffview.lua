@@ -17,7 +17,7 @@ return {
     dependencies = 'nvim-lua/plenary.nvim',
     keys = {
       { '<leader>gg', '<cmd>DiffviewOpen<cr>', desc = 'Diff workspace changes' },
-      { '<leader>gG', open_diff_view, desc = 'Diff workspace changes with selected branch' },
+      { '<leader>gG', open_diff_view, desc = 'Diff with selected branch' },
       { '<leader>gF', '<cmd>DiffviewFileHistory %<cr>', desc = 'File history (this file)' },
       { '<leader>gf', '<cmd>DiffviewFileHistory<cr>', desc = 'File history' },
       { '<leader>gd', '<cmd>DiffviewClose<cr>', desc = 'Close diffview' },
