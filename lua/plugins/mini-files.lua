@@ -31,7 +31,7 @@ return {
           MiniFiles.set_target_window(vim.api.nvim_get_current_win())
         end)
 
-        MiniFiles.close()
+        MiniFiles.go_in({ close_on_file = true })
       end
 
       -- Adding `desc` will result into `show_help` entries
