@@ -1,12 +1,14 @@
 local open_diff_view = function()
-  vim.ui.input({ prompt = 'Diff working tree with branch: ' }, function(branch_name)
-    -- TODO: hooking this up to telescope to select a branch would be awesome
-    if branch_name ~= nil and string.len(branch_name) > 0 then
-      require('diffview').open(branch_name)
-    else
-      vim.cmd('DiffviewOpen')
-    end
-  end)
+  require('telescope.builtin').git_branches({
+    attach_mappings = function(_, map)
+      map('i', '<CR>', function(prompt_bufnr)
+        local selection = require('telescope.actions.state').get_selected_entry()
+        require('telescope.actions').close(prompt_bufnr)
+        require('diffview').open(selection.value)
+      end)
+      return true
+    end,
+  })
 end
 
 return {
@@ -15,7 +17,7 @@ return {
     dependencies = 'nvim-lua/plenary.nvim',
     keys = {
       { '<leader>gg', '<cmd>DiffviewOpen<cr>', desc = 'Diff workspace changes' },
-      { '<leader>gG', open_diff_view, desc = 'Diff workspace changes with development' },
+      { '<leader>gG', open_diff_view, desc = 'Diff workspace changes with selected branch' },
       { '<leader>gF', '<cmd>DiffviewFileHistory %<cr>', desc = 'File history (this file)' },
       { '<leader>gf', '<cmd>DiffviewFileHistory<cr>', desc = 'File history' },
       { '<leader>gd', '<cmd>DiffviewClose<cr>', desc = 'Close diffview' },
