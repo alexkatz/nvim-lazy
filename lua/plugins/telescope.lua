@@ -1,7 +1,7 @@
 return {
   {
     'nvim-telescope/telescope.nvim',
-    enabled = false,
+    -- enabled = false,
     keys = {
       { '<leader>gc', false },
       { '<leader>gs', false },
@@ -26,18 +26,11 @@ return {
         },
       }
 
-      -- opts.defaults.sorting_strategy = 'ascending'
-      opts.defaults.layout_strategy = 'vertical'
-      opts.defaults.layout_config = {
-        -- prompt_position = 'top',
-        mirror = true,
-      }
-
       opts.defaults.mappings.i['<C-q>'] = actions.smart_send_to_qflist + actions.open_qflist
       opts.defaults.mappings.i['<cr>'] = actions.select_default
-      opts.defaults.mappings.i['<esc>'] = actions.close
       opts.defaults.mappings.i['<C-j>'] = actions.move_selection_next
       opts.defaults.mappings.i['<C-k>'] = actions.move_selection_previous
+      opts.defaults.mappings.i['<esc>'] = actions.close
 
       opts.defaults.mappings.i['<C-n>'] = function(...)
         actions.results_scrolling_down(...)
