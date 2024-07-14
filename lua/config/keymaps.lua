@@ -38,17 +38,17 @@ vim.keymap.set('n', '<leader>wF', '<cmd>wa<cr>', { desc = 'Save All Buffers' })
 vim.keymap.set('n', '<leader>wo', '<cmd>only<cr>', { desc = 'Close Other Windows' })
 
 vim.keymap.set('n', '<leader>bo', function()
-  local visible_buffers = {}
-  local windows = vim.api.nvim_list_wins()
-  for _, window in ipairs(windows) do
-    local buffer = vim.api.nvim_win_get_buf(window)
-    visible_buffers[buffer] = true
+  local vis_buffers = {}
+  local wins = vim.api.nvim_list_wins()
+  for _, win in ipairs(wins) do
+    local buffer = vim.api.nvim_win_get_buf(win)
+    vis_buffers[buffer] = true
   end
 
   local bufremove = require('mini.bufremove')
   local all_buffers = vim.api.nvim_list_bufs()
   for _, buf in ipairs(all_buffers) do
-    if not visible_buffers[buf] then
+    if not vis_buffers[buf] then
       bufremove.delete(buf)
     end
   end

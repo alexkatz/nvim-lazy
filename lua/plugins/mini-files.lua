@@ -1,6 +1,5 @@
 return {
   'echasnovski/mini.files',
-  dependencies = { 'nvim-tree/nvim-web-devicons' },
 
   opts = function(_, opts)
     opts.options = {
