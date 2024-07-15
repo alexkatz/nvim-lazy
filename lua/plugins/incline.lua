@@ -6,13 +6,15 @@ return {
     require('incline').setup({
       window = {
         padding = 0,
-        margin = { horizontal = 0 },
+        margin = {
+          horizontal = 0,
+          vertical = 1,
+        },
       },
       render = function(props)
         local lazy_icons = LazyVim.config.icons
         local mini_icons = require('mini.icons')
         local C = require('catppuccin.palettes').get_palette('macchiato')
-        local U = require('catppuccin.utils.colors')
 
         local function get_filename()
           local filename = vim.fn.fnamemodify(vim.api.nvim_buf_get_name(props.buf), ':.')
@@ -80,38 +82,12 @@ return {
           return labels
         end
 
-        local cursor_position = vim.api.nvim_win_get_cursor(props.win)
-        local cursor_line = cursor_position[1]
-        local cursor_at_top = cursor_line == 1
-
-        local darkened_mantle = U.darken(C.base, 0.15, C.mantle)
-        local lightened_mantle = U.darken(C.surface0, 0.64, C.base)
-
-        local chev_bg = darkened_mantle
-
-        if cursor_at_top and props.focused then
-          chev_bg = lightened_mantle
-        end
-
-        if not cursor_at_top and props.focused then
-          chev_bg = C.base
-        end
-
-        if cursor_at_top and not props.focused then
-          chev_bg = lightened_mantle
-        end
-
         return {
-          {
-            '',
-            guifg = props.focused and C.surface0 or darkened_mantle,
-            guibg = chev_bg,
-          },
           { get_diagnostics() },
           { get_mini_diff() },
           { get_filename() },
           guifg = props.focused and C.text or C.overlay2,
-          guibg = props.focused and C.surface0 or darkened_mantle,
+          guibg = props.focused and C.surface0 or C.mantle,
         }
       end,
     })
